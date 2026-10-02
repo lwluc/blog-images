@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_00p9yu8" targetNamespace="http://bpmn.io/schema/bpmn" exporter="bpmn-js (https://demo.bpmn.io)" exporterVersion="18.30.1" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.24.0">
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_00p9yu8" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="5.42.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.24.0">
   <bpmn:process id="Process_0xbebqc" isExecutable="true">
     <bpmn:startEvent id="StartEvent_1">
       <bpmn:outgoing>Flow_0avlsos</bpmn:outgoing>
@@ -28,17 +28,20 @@
       <bpmn:incoming>Flow_099jcuw</bpmn:incoming>
     </bpmn:endEvent>
     <bpmn:sequenceFlow id="Flow_099jcuw" sourceRef="Activity_04mldq0" targetRef="Event_0puuyzx" />
-    <bpmn:userTask id="Activity_04mldq0" name="Continue with order">
-      <bpmn:incoming>Flow_1tv1kql</bpmn:incoming>
-      <bpmn:outgoing>Flow_099jcuw</bpmn:outgoing>
-    </bpmn:userTask>
     <bpmn:userTask id="Activity_01twavp" name="Clarify reservation with planner">
       <bpmn:incoming>Flow_17htgtl</bpmn:incoming>
       <bpmn:outgoing>Flow_1esi40s</bpmn:outgoing>
     </bpmn:userTask>
+    <bpmn:task id="Activity_04mldq0" name="Continue with order">
+      <bpmn:incoming>Flow_1tv1kql</bpmn:incoming>
+      <bpmn:outgoing>Flow_099jcuw</bpmn:outgoing>
+    </bpmn:task>
   </bpmn:process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
     <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Process_0xbebqc">
+      <bpmndi:BPMNShape id="StartEvent_1_di" bpmnElement="StartEvent_1">
+        <dc:Bounds x="152" y="122" width="36" height="36" />
+      </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Gateway_1c8z8j3_di" bpmnElement="Gateway_1c8z8j3" isMarkerVisible="true">
         <dc:Bounds x="475" y="115" width="50" height="50" />
         <bpmndi:BPMNLabel>
@@ -48,20 +51,17 @@
       <bpmndi:BPMNShape id="Activity_19qkx5c_di" bpmnElement="Activity_0d4n9nq">
         <dc:Bounds x="320" y="100" width="100" height="80" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="StartEvent_1_di" bpmnElement="StartEvent_1">
-        <dc:Bounds x="152" y="122" width="36" height="36" />
-      </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Gateway_1s7hvu2_di" bpmnElement="Gateway_1s7hvu2" isMarkerVisible="true">
         <dc:Bounds x="225" y="115" width="50" height="50" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Event_0puuyzx_di" bpmnElement="Event_0puuyzx">
         <dc:Bounds x="842" y="122" width="36" height="36" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_0a7f8j1_di" bpmnElement="Activity_04mldq0">
-        <dc:Bounds x="630" y="100" width="100" height="80" />
-      </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Activity_0atk8i5_di" bpmnElement="Activity_01twavp">
         <dc:Bounds x="630" y="210" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1cbe323_di" bpmnElement="Activity_04mldq0">
+        <dc:Bounds x="630" y="100" width="100" height="80" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="Flow_0avlsos_di" bpmnElement="Flow_0avlsos">
         <di:waypoint x="188" y="140" />
